@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performa_It</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/logo-performa.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <aside class="cart-sidebar cart-disable">
+        <div class="cart-header">
+          <div class="sub__header-cart">
+            <figure class="content-image">
+              <img
+                class="icon"
+                src="./assets/icon-carrinho.svg"
+                alt="Imagem de um sacola de compra"
+              />
+              <span class="clothes-count">0</span>
+            </figure>
+            <span>Minha sacola</span>
+          </div>
+          <img
+            class="icon-close toggle-cart"
+            src="./assets/icon-close.svg"
+            alt="Botão de fechar"
+          />
+        </div>
+        <div class="cart-line">
+          <div></div>
+        </div>
+        <div class="empty-cart">
+          <button type="button" class="keep-browsing toggle-cart">
+            Continuar navegando
+          </button>
+        </div>
+        <ul class="content__list-clothes"></ul>
+        <div class="cart-footer">
+          <button type="button" class="cart-button toggle-cart">
+            Continuar comprando
+          </button>
+        </div>
+      </aside>
+      <header class="header">
+        <div class="free-freight">
+          <span> FRETE GRÁTIS ACIMA DE <strong>R$199</strong></span>
+        </div>
+        <div class="sub__header">
+          <div class="content__nav">
+            <img
+              class="logo-performa"
+              src="./assets/logo-performa.svg"
+              alt="logo performa it"
+            />
+            <nav class="filters">
+              <a href="#">ROUPAS</a><a href="#">SAPATOS</a
+              ><a href="#">ACESSÓRIOS</a><a href="#">CASA E CUIDADO</a
+              ><a href="#">BAZAR</a>
+            </nav>
+          </div>
+          <div class="user-interaction">
+            <input type="text" placeholder="Digite sua busca aqui" />
+            <label class="element"></label>
+            <div class="content-btn">
+              <img
+                class="perfil icon"
+                src="./assets/perfil.svg"
+                alt="icone do perfil"
+              />
+              <figure class="header__content-image toggle-cart">
+                <img
+                  class="icon-cart"
+                  src="./assets/icon-carrinho.svg"
+                  alt="Imagem de um sacola de compra"
+                />
+                <span class="header__clothes-count">0</span>
+              </figure>
+              <img
+                class="menu icon"
+                src="./assets/menu.svg"
+                alt="icone do menu"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="line">
+          <div></div>
+        </div>
+      </header>
+      <section class="choice-clothes">
+        <ul class="guide-sections">
+          <li>Home ></li>
+          <li>Roupas ></li>
+          <li><strong>Camisetas</strong></li>
+        </ul>
+        <div class="content-clothes">
+          <div class="clothes">
+            <aside>
+              <ul class="content-aside__clothes">
+                <li>
+                  <img class="aside-clothes" src="" alt="" />
+                </li>
+                <li>
+                  <img class="aside-clothes" src="" alt="" />
+                </li>
+                <li>
+                  <img class="aside-clothes" src="" alt="" />
+                </li>
+                <li>
+                  <img class="aside-clothes" src="" alt="" />
+                </li>
+              </ul>
+            </aside>
+            <div class="content">
+              <img class="main-clothe" src="" alt="" />
+            </div>
+          </div>
+          <div class="content-choices">
+            <div class="content-price">
+              <div>
+                <h3 class="title"></h3>
+                <p>REF.: <span class="clothe-id"></span></p>
+              </div>
+              <div class="text">
+                <p>
+                  De
+                  <span class="original-price"></span>
+                  <strong class="discount-price"></strong>
+                </p>
+                <p>ou 3x de <span class="division-price"></span></p>
+              </div>
+            </div>
+            <form class="form-sizes">
+              <div>
+                <h4 class="measurement-guide">
+                  Escolha o Tamanho
+                  <span> Guia de Medidas </span>
+                </h4>
+                <div class="content-btn">
+                  <input
+                    class="size-input"
+                    type="radio"
+                    value="un"
+                    id="size-un"
+                  />
+                  <label class="label-size" for="size-un">UN</label>
+                  <input
+                    class="size-input"
+                    type="radio"
+                    value="p"
+                    id="size-p"
+                  />
+                  <label class="label-size" for="size-p">P</label>
+                  <input
+                    class="size-input"
+                    type="radio"
+                    value="m"
+                    id="size-m"
+                  />
+                  <label class="label-size" for="size-m">M</label>
+                  <input
+                    class="size-input"
+                    type="radio"
+                    value="g"
+                    id="size-g"
+                  />
+                  <label class="label-size" for="size-g">G</label>
+                  <input
+                    class="size-input"
+                    type="radio"
+                    value="gg"
+                    id="size-gg"
+                  />
+                  <label class="label-size" for="size-gg">GG</label>
+                  <input
+                    class="size-input"
+                    type="radio"
+                    value="eg"
+                    id="size-eg"
+                  />
+                  <label class="label-size disable" for="size-eg">EG</label>
+                </div>
+              </div>
+              <div class="choose-color">
+                <h5>Escolha a cor</h5>
+                <div class="colors">
+                  <input
+                    class="color-input"
+                    value="black"
+                    type="radio"
+                    id="black"
+                  />
+                  <label class="black label-style" for="black"></label>
+                  <input
+                    class="color-input"
+                    value="yellow"
+                    type="radio"
+                    id="yellow"
+                  />
+                  <label class="yellow label-style" for="yellow"></label>
+                  <input
+                    class="color-input"
+                    value="red"
+                    type="radio"
+                    id="red"
+                  />
+                  <label class="red label-style" for="red"></label>
+                  <input
+                    class="color-input"
+                    value="blue"
+                    type="radio"
+                    id="blue"
+                  />
+                  <label class="blue label-style" for="blue"></label>
+                  <input
+                    class="color-input"
+                    value="light-blue"
+                    type="radio"
+                    id="light-blue"
+                  />
+                  <label
+                    class="light-blue label-style"
+                    for="light-blue"
+                  ></label>
+                  <input
+                    class="color-input"
+                    value="green"
+                    type="radio"
+                    id="green"
+                  />
+                  <label class="green label-style" for="green"></label>
+                  <input
+                    class="color-input"
+                    value="orange"
+                    type="radio"
+                    id="orange"
+                  />
+                  <label class="orange label-style" for="orange"></label>
+                  <input
+                    class="color-input"
+                    value="light-brown"
+                    type="radio"
+                    id="light-brown"
+                  />
+                  <label
+                    class="light-brown label-style"
+                    for="light-brown"
+                  ></label>
+                  <input
+                    class="color-input"
+                    value="brown"
+                    type="radio"
+                    id="brown"
+                  />
+                  <label class="brown label-style" for="brown"></label>
+                  <input
+                    class="color-input"
+                    value="white"
+                    type="radio"
+                    id="white"
+                  />
+                  <label class="white label-style" for="white"></label>
+                </div>
+              </div>
+              <button class="button-buy" type="button">COMPRAR</button>
+            </form>
+            <div class="calculate-shipping">
+              <label for="calculate-shipping">Calcule o valor do frete</label>
+              <div class="input-btn">
+                <input type="text" id="calculate-shipping" />
+                <button type="button">OK</button>
+              </div>
+              <span>Não sei o meu cep</span>
+            </div>
+            <div class="other-line">
+              <div></div>
+            </div>
+            <div class="description">
+              <p>DESCRIÇÃO E DETALHES</p>
+              <img src="./assets/icon-soma.svg" alt="icon de soma" />
+            </div>
+            <div class="other-line">
+              <div></div>
+            </div>
+            <div class="assessments-icon">
+              <img
+                src="./assets/avaliacao.svg"
+                alt="icone estrelas de avaliação"
+              />
+              <span>30 avaliações</span>
+            </div>
+            <div class="other-line">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-recommended">
+        <div class="recommended">
+          <p class="releases">Lançamentos</p>
+          <button type="button">ver tudo</button>
+        </div>
+        <div class="recommended-clothes"></div>
+      </section>
+      <div class="sections-user-reviews">
+        <h2>Avaliações e dúvidas <strong>Sobre este produto</strong></h2>
+      </div>
+      <section class="user-reviews">
+        <section class="evaluations">
+          <div class="title-evaluations">
+            <h4>Avaliações</h4>
+            <div class="content-stars">
+              <img src="./assets/stars.svg" alt="icone estrelas de avaliação" />
+              <span> Baseado em 56 avaliações</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="content-comments">
+            <div class="client-name">
+              <span>Nome do cliente</span>
+              <div class="verified-purchase">
+                <img
+                  src="./assets/check-yourwiens.svg"
+                  alt="icone de aprovado"
+                />
+                <p>Compra Verificada</p>
+              </div>
+            </div>
+            <div class="session-comment">
+              <div class="star-rate">
+                <img
+                  src="./assets/stars.svg"
+                  alt="icone estrelas de avaliação"
+                />
+                <span>Há 6 mes(es)</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                lacus mi, egestas et suscipit quis, mattis eget tellus. Maecenas
+                tempor blandit e.
+              </p>
+              <div class="verified-purchase">
+                <img
+                  src="./assets/check-yourwiens.svg"
+                  alt="icone de aprovado"
+                />
+                <p>Sim, recomendaria este produto a um amigo</p>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="content-comments">
+            <div class="client-name">
+              <span>Nome do cliente</span>
+              <div class="verified-purchase">
+                <img
+                  src="./assets/check-yourwiens.svg"
+                  alt="icone de aprovado"
+                />
+                <p>Compra Verificada</p>
+              </div>
+            </div>
+            <div class="session-comment">
+              <div class="star-rate">
+                <img
+                  src="./assets/stars.svg"
+                  alt="icone estrelas de avaliação"
+                />
+                <span>Há 6 mes(es)</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                lacus mi, egestas et suscipit quis, mattis eget tellus. Maecenas
+                tempor blandit e.
+              </p>
+              <div class="verified-purchase">
+                <img
+                  src="./assets/check-yourwiens.svg"
+                  alt="icone de aprovado"
+                />
+                <p>Sim, recomendaria este produto a um amigo</p>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="content-comments">
+            <div class="client-name">
+              <span>Nome do cliente</span>
+              <div class="verified-purchase">
+                <img
+                  src="./assets/check-yourwiens.svg"
+                  alt="icone de aprovado"
+                />
+                <p>Compra Verificada</p>
+              </div>
+            </div>
+            <div class="session-comment">
+              <div class="star-rate">
+                <img
+                  src="./assets/stars.svg"
+                  alt="icone estrelas de avaliação"
+                />
+                <span>Há 6 mes(es)</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                lacus mi, egestas et suscipit quis, mattis eget tellus. Maecenas
+                tempor blandit e.
+              </p>
+              <div class="verified-purchase">
+                <img src="./assets/check-yourwiens.svg" alt="" />
+                <p>Sim, recomendaria este produto a um amigo</p>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="content-navigations">
+            <div class="navigations">
+              <img
+                src="./assets/ico-arrow-left.svg"
+                alt="icone flexa esquerda"
+              />
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <img src="./assets/ico-arrow.svg" alt="icone flecha direita" />
+            </div>
+            <button class="generic-button" type="button">AVALIAR</button>
+          </div>
+        </section>
+        <div class="break"></div>
+        <section class="questions">
+          <div class="title-evaluations">
+            <h4>Dúvidas</h4>
+            <span
+              >Tem alguma dúvida sobre este produto? Pergunte ao lojista e a
+              outros compradores!</span
+            >
+            <div class="content-info">
+              <p>
+                Pergunte sobre o produto, como utilizá-lo ou peça alguma dica
+              </p>
+            </div>
+            <button class="generic-button" type="button">PERGUNTAR</button>
+          </div>
+          <div class="content-client-questions">
+            <span class="client-questions"> Nome do cliente </span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              eleifend dui eu enim porttitor, vitae ultrices dolor aliquet.
+              Pellentesque convallis, ligula eu dictum bibendum, nibh neque
+              aliquam enim, ornare congue dui urna eget velit.
+            </p>
+            <div class="store-response">
+              <div class="vertical-line"></div>
+              <span class="client-questions"> Loja </span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                eleifend dui eu enim porttitor, vitae ultrices dolor aliquet.
+                Pellentesque convallis, ligula eu dictum bibendum, nibh neque
+                aliquam enim, ornare congue dui urna eget velit.
+              </p>
+            </div>
+            <span class="client-questions"> Nome do cliente </span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              eleifend dui eu enim porttitor, vitae ultrices dolor aliquet.
+              Pellentesque convallis, ligula eu dictum bibendum, nibh neque
+              aliquam enim, ornare congue dui urna eget velit.
+            </p>
+
+            <div class="store-response">
+              <div class="vertical-line"></div>
+              <span class="client-questions"> Loja </span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                eleifend dui eu enim porttitor, vitae ultrices dolor aliquet.
+                Pellentesque convallis, ligula eu dictum bibendum, nibh neque
+                aliquam enim, ornare congue dui urna eget velit.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <footer>
+        <div class="footer">
+          <div class="newsletter">
+            <h4>Newsletter</h4>
+            <p>
+              Assine nossa newsletter e fique por dentro de nossas ofertas e
+              novidades.
+            </p>
+            <div class="email-input">
+              <input type="text" placeholder="Informe seu Email" />
+              <button type="submit">ENVIAR</button>
+            </div>
+          </div>
+          <div class="content__sub-footer">
+            <div class="sub__footer">
+              <h4>Sobre</h4>
+              <span>Quem Somos</span>
+              <span>Onde Encontrar</span>
+              <span>Blog</span>
+            </div>
+            <div class="sub__footer">
+              <h4>Ajuda</h4>
+              <span>Pedidos</span>
+              <span>Trocas</span>
+              <span>FAQ</span>
+              <span>Revenda</span>
+            </div>
+            <div class="sub__footer">
+              <h4>Redes Sociais</h4>
+              <div class="medias">
+                <img src="./assets/Facebook.svg" alt="icone facebook" />
+                <img src="./assets/instagram.svg" alt="icone instagram" />
+                <img src="./assets/spotify.svg" alt="icone spotify" />
+              </div>
+            </div>
+            <div class="sub__footer">
+              <h4>Segurança</h4>
+              <div class="medias">
+                <img src="./assets/obs.svg" alt="icone-avaliação" />
+                <img
+                  src="./assets/yourviews.svg"
+                  alt="icone selo loja confiável"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="location">
+          <p>
+            <span>HERMOSO COMPADRE CONFECÇÃO LTDA</span> - CNPJ
+            12.069.071/0001-20 | RUA ANTÔNIO ALVES TAVEIRA, 2160 - VILA TÓTOLI,
+            FRANCA-SP - CEP 14409-123
+          </p>
+        </div>
+      </footer>
+    </main>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
