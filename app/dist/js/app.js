@@ -1,3 +1,4 @@
+import { CartMessageView } from "./views/cart-message-view.js";
 export const database = [
     {
         id: 104893,
@@ -169,6 +170,7 @@ class ShoppingCart {
     }
     constructor() {
         this.items = [];
+        this.cartMessageView = new CartMessageView('#mensagemView');
         this.items = [];
         this.cartFooter = document.querySelector(".cart-footer");
         this.emptyCart = document.querySelector(".empty-cart");
@@ -369,11 +371,12 @@ class ShoppingCart {
                         this.addItem(selectedItem);
                         this.updateCart();
                         this.saveItemsToLocalStorage();
+                        this.cartMessageView.update("Produto adicionado com sucesso!", "alert-success");
                     }
                 }
             }
             else {
-                alert("Por favor, selecione um tamanho e uma cor antes de comprar.");
+                this.cartMessageView.update("Por favor, selecione um tamanho e uma cor antes de comprar.", "alert-danger");
             }
         }
         if (clickTarget.classList.value == "trash-icon") {
@@ -381,6 +384,7 @@ class ShoppingCart {
             this.removeItem(itemId);
             this.updateCart();
             this.saveItemsToLocalStorage();
+            this.cartMessageView.update("Produto removido do carrinho!", "alert-warning");
         }
     }
     handleQuantityButton(contentQuantityClothes, quantityCount, item) {
@@ -402,6 +406,7 @@ class ShoppingCart {
                         if (item.quantity === 1) {
                             this.removeItem(item.id);
                             this.saveItemsToLocalStorage();
+                            this.cartMessageView.update("Produto removido do carrinho!", "alert-warning");
                         }
                         else {
                             item.quantity--;

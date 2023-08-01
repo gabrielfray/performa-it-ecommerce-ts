@@ -1,4 +1,5 @@
 import { ItemCarrinho } from "./interfaces/index";
+import { CartMessageView } from "./views/cart-message-view.js";
 
 export const database: ItemCarrinho[] = [
     {
@@ -213,6 +214,8 @@ class ShoppingCart {
     private saveItemsToLocalStorage(): void {
         localStorage.setItem("@item:", JSON.stringify(this.items));
     }
+    private cartMessageView = new CartMessageView('#mensagemView');
+
 
     constructor() {
         this.items = [];
@@ -478,10 +481,17 @@ class ShoppingCart {
                         this.addItem(selectedItem);
                         this.updateCart();
                         this.saveItemsToLocalStorage();
+
+                        this.cartMessageView.update(
+                            "Produto adicionado com sucesso!",
+                            "alert-success"
+                        )
                     }
                 }
             } else {
-                alert("Por favor, selecione um tamanho e uma cor antes de comprar.");
+                this.cartMessageView.update(
+                    "Por favor, selecione um tamanho e uma cor antes de comprar.", "alert-danger"
+                )
             }
         }
 
@@ -490,6 +500,10 @@ class ShoppingCart {
             this.removeItem(itemId);
             this.updateCart();
             this.saveItemsToLocalStorage();
+            this.cartMessageView.update(
+                "Produto removido do carrinho!",
+                "alert-warning"
+            )
         }
     }
 
@@ -515,6 +529,10 @@ class ShoppingCart {
                         if (item.quantity === 1) {
                             this.removeItem(item.id);
                             this.saveItemsToLocalStorage();
+                            this.cartMessageView.update(
+                                "Produto removido do carrinho!",
+                                "alert-warning"
+                            )
                         } else {
                             item.quantity--;
                             quantityCount.innerHTML = item.quantity.toString();
