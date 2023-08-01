@@ -12,4 +12,7 @@ export class View {
         let template = this.template(model, messageType);
         this.elemento.innerHTML = template;
     }
+    clear() {
+        this.elemento.innerHTML = "";
+    }
 }

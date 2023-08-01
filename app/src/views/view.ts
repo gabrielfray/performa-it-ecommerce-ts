@@ -16,5 +16,9 @@ export abstract class View<T> {
     this.elemento.innerHTML = template;
   }
 
+  public clear(): void {
+    this.elemento.innerHTML = ""
+  }
+
   protected abstract template(model: T, messageType: T): string;
 }

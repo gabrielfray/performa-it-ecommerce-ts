@@ -486,12 +486,21 @@ class ShoppingCart {
                             "Produto adicionado com sucesso!",
                             "alert-success"
                         )
+
+                        setTimeout(() => {
+                            this.cartMessageView.clear()
+                        }, 4000);
+
                     }
                 }
             } else {
                 this.cartMessageView.update(
                     "Por favor, selecione um tamanho e uma cor antes de comprar.", "alert-danger"
                 )
+
+                setTimeout(() => {
+                    this.cartMessageView.clear()
+                }, 3000);
             }
         }
 
@@ -504,6 +513,10 @@ class ShoppingCart {
                 "Produto removido do carrinho!",
                 "alert-warning"
             )
+
+            setTimeout(() => {
+                this.cartMessageView.clear()
+            }, 3000);
         }
     }
 
@@ -533,6 +546,9 @@ class ShoppingCart {
                                 "Produto removido do carrinho!",
                                 "alert-warning"
                             )
+                            setTimeout(() => {
+                                this.cartMessageView.clear()
+                            }, 3000);
                         } else {
                             item.quantity--;
                             quantityCount.innerHTML = item.quantity.toString();
@@ -563,8 +579,6 @@ class ShoppingCart {
             this.handleBuyButton(event);
         });
     }
-
-
 }
 
 const shoppingCart = new ShoppingCart()
@@ -580,5 +594,3 @@ document.querySelectorAll(".toggle-cart").forEach((elem) => elem.addEventListene
             cartElement!.classList.toggle("cart-disable");
         }
     }))
-
-

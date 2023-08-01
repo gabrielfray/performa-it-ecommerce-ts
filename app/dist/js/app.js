@@ -372,11 +372,17 @@ class ShoppingCart {
                         this.updateCart();
                         this.saveItemsToLocalStorage();
                         this.cartMessageView.update("Produto adicionado com sucesso!", "alert-success");
+                        setTimeout(() => {
+                            this.cartMessageView.clear();
+                        }, 4000);
                     }
                 }
             }
             else {
                 this.cartMessageView.update("Por favor, selecione um tamanho e uma cor antes de comprar.", "alert-danger");
+                setTimeout(() => {
+                    this.cartMessageView.clear();
+                }, 3000);
             }
         }
         if (clickTarget.classList.value == "trash-icon") {
@@ -385,6 +391,9 @@ class ShoppingCart {
             this.updateCart();
             this.saveItemsToLocalStorage();
             this.cartMessageView.update("Produto removido do carrinho!", "alert-warning");
+            setTimeout(() => {
+                this.cartMessageView.clear();
+            }, 3000);
         }
     }
     handleQuantityButton(contentQuantityClothes, quantityCount, item) {
@@ -407,6 +416,9 @@ class ShoppingCart {
                             this.removeItem(item.id);
                             this.saveItemsToLocalStorage();
                             this.cartMessageView.update("Produto removido do carrinho!", "alert-warning");
+                            setTimeout(() => {
+                                this.cartMessageView.clear();
+                            }, 3000);
                         }
                         else {
                             item.quantity--;
